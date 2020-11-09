@@ -1,0 +1,57 @@
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!--jQuery-->
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<style>
+    th{ 
+        color:#000000;
+            }
+</style>
+
+
+<table class="table table-striped">
+    <tr  class="bg-info">
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Major</th>
+    </tr>
+
+    <tbody id="student">
+        
+    </tbody>
+</table>
+
+<script>
+	var myArray = [
+	    {'firstName':'Haiylu', 'lastName':'Kibret', 'major':'Computer Science'},
+	    {'firstName':'George', 'lastName':'Alen', 'major':'Biology'},
+	    {'firstName':'Betty', 'lastName':'Kassa', 'major':'Marketing'},
+	]
+	
+	buildTable(myArray)
+
+	function buildTable(data){
+		var table = document.getElementById('student')
+
+		for (var i = 0; i < data.length; i++){ /* loop that creates us every row and col */
+			var row = `<tr>
+							<td>${data[i].firstName}</td>
+							<td>${data[i].lastName}</td>
+							<td>${data[i].major}</td>
+					  </tr>`
+			table.innerHTML += row
+
+
+		}
+	}
+
+</script>
+<!---
+Client and Server scripts used in the proccess
+- html
+-css stylesheet
+-Jquery (javaScript libary)
+-javaScripts
+-Json Array
+-->
